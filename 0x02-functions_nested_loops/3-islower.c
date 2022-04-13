@@ -1,15 +1,27 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _islower - function that checks for lowercase character.
- * @c: The input character to check
- * Return: int.
+ * print_alphabet_x10 - print alphabet
+ *
+ * Return: Always 0.
  */
-
-int _islower(int c)
+void print_alphabet_x10(void)
 {
-	if (c >= 97 && c <= 122)
-		return (1);
-	else
-		return (0);
+int alphabet;
+int count;
+
+
+count = 0;
+while (count < 10)
+{
+for (alphabet = 'a' ; alphabet <= 'z'; alphabet++)
+{
+_putchar(alphabet);
+}
+
+count++;
+_putchar('\n');
+}
+
+
 }
