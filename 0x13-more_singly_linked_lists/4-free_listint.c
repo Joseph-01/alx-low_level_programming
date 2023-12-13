@@ -1,11 +1,10 @@
 #include "lists.h"
 
 /**
- * free_listint - Frees a listint_t linked list.
- * @head: Pointer to the head of the linked list.
+ * free_listint - frees a linked list
+ * @head: head of the list
  *
- * Description: This function frees the memory allocated for each node
- *              in the linked list and sets the head to NULL.
+ * Return: void
  */
 void free_listint(listint_t *head)
 {
@@ -13,11 +12,8 @@ void free_listint(listint_t *head)
 
 	while (head != NULL)
 	{
-
-		temp = head->next;
-
-		free(head);
-		head = temp;
+		temp = head;
+		head = head->next;
+		free(temp);
 	}
 }
-
