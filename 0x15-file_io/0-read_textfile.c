@@ -8,7 +8,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
     buffer = malloc(sizeof(char) * letters);
     if (pf == NULL)
     {
-        printf("File does not exist");
+        return (0)
     }
     else
     {
@@ -16,6 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
         {
             printf("%s", buffer);
         }
+        free(buffer);
         fclose(pf);
     }
 
