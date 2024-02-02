@@ -15,6 +15,7 @@ for (i = 1; i < size; i++)
 {
 ptr[i] = c;
 }
+free(ptr);
 printf("\n");
 return (ptr);
 }
